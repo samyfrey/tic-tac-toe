@@ -1,6 +1,9 @@
 
 const config = require('../config')
 
+
+// this file is our api requests
+
 // the param formData is the data collected by
 
 const signUp = function (formData) {

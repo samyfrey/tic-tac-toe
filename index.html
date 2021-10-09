@@ -13,19 +13,24 @@
     </head>
     <body>
       <header>Tic Tac Toe</header>
-      <h1>Main page</h1>
+      <!-- this is screen #1 landing  -->
+      <h1>Landing page</h1>
       <section id="main-button">
-        <form id="sign-up">
-        <button class="sign-up-button">Sign Up</button>
-        <!-- this is screen #3-->
+        <button id="sign-up-button">Sign Up</button>
+        <button id="sign-in-button">Sign In</button>
+      </section>
+
+      <!-- this is screen #3-->
+      <section id="sign-up-screen">
+      <form id="sign-up-form">
         <fieldset>
           <input type="email" name="credentials[email]" placeholder="Email" required>
           <input type="password" name="credential[password]" placeholder="Password" required>
           <input type="password" name="credential[password_confirmation]" placeholder="Confirm Password" required>
           <button class="sign-up-submit">Sign Up</button>
+          <div id="sign-up-display"></div>
         </fieldset>
-        </form>
+      </form>
       </section>
-
     </body>
 </html>
