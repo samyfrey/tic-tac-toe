@@ -19,6 +19,18 @@
         <button id="sign-up-button">Sign Up</button>
         <button id="sign-in-button">Sign In</button>
       </section>
+      <!-- this is screen #2 -->
+
+      <section id="sign-in-screen">
+        <form id="sign-in-form">
+          <fieldset>
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+            <button>Sign In</button>
+          </fieldset>
+        </form>
+        <div id="sign-in-display"></div>
+      </section>
 
       <!-- this is screen #3-->
       <section id="sign-up-screen">
@@ -28,10 +40,15 @@
           <input type="password" name="credentials[password]" placeholder="Password" required>
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
           <button>Sign Up</button>
-
         </fieldset>
       </form>
       <div id="sign-up-display"></div>
+      </section>
+
+
+      <!-- this is screen #4 the screen wil be hidden until signed in-->
+      <section id="game-screen">
+        <p>This is the Game section. It will be display:none in Css and .show() once signed in</p>
       </section>
     </body>
 </html>

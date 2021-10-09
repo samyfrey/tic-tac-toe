@@ -11,4 +11,6 @@ $(() => {
   $('#sign-up-button').on('click', authEvents.onSignUpShow)
   // 1 event when user submit sign up forms when click on sign-up-submit
   $('#sign-up-form').on('submit', authEvents.onSignUpSubmit)
+  $('#sign-in-form').on('submit', authEvents.onSignInSubmit)
+
 })
