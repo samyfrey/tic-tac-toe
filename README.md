@@ -10,3 +10,9 @@ As a user:
 * Once I am done playing, I want to be able to start over **or sign out**
 * When I play, I want to know as soon as I have won or lost 
 * Ideally, on the landing page, I want to be able to choose my language, between English, French or Spanish
+
+Link to github repo
+https://github.com/samyfrey/tic-tac-toe
+
+Link to wireframes (includes New York times hw)
+https://thisizsam2.imgur.com/all
