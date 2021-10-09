@@ -1,6 +1,8 @@
 
 const config = require('../config')
 
+// the param formData is the data collected by
+
 const signUp = function (formData) {
   return $.ajax({
     url: `${config.apiUrl}/sign-up`,

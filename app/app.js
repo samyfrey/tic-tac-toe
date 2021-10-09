@@ -2,8 +2,13 @@
 // const example = require('./example')
 
 // use require without a reference to ensure a file is bundled
-// require('./example')
+const authEvents = require('./auth/events')
+
+// this is our events listener file
 
 $(() => {
-  // your JS code goes here
+  // 1 event when user click sign up btn to open sign up screen (#3)
+  $('#sign-up-button').on('click', authEvents.onSignUpShow)
+  // 1 event when user submit sign up forms when click on sign-up-submit
+  $('#sign-up-submit').on('submit', authEvents.onSignUpSubmit)
 })
