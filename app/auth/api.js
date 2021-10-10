@@ -1,5 +1,6 @@
 
 const config = require('../config')
+const store = require('../store')
 
 // this file is our api requests
 
@@ -21,10 +22,24 @@ const signIn = function (formData) {
   })
 }
 
-module.exports = {
-  signUp,
-  signIn
+// the signOut API is a DELETE request to the server to destroy the token created at sign in, that token is stored in the var 'store' and used here in the auth header so the request knows which user to sign out
+
+const signOut = function () {
+  return $.ajax({
+    url: `${config.apiUrl}/sign-out`,
+    method: 'DELETE',
+    headers: {
+      // here we attach the user.token return by the api to the store var
+      Authorization: 'Bearer ' + store.user.token
+
+    }
+  })
 }
 
-// notes
-// don't forget 'store' var for signOut (which allows to use token # and delete it)
+module.exports = {
+  signUp,
+  signIn,
+  signOut
+}
+
+
