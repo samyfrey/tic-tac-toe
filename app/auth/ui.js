@@ -3,6 +3,7 @@
 const store = require('../store')
 
 // the param responseData is the data (email and pwd when signed up) that is passed by .then notation in event.js
+
 // this function alerts in bodytext the user that the signUp (POST to server) was successful
 const signUpSuccess = function (responseData) {
   $('#sign-up-display').text(
@@ -42,6 +43,7 @@ const signInSuccess = function (responseData) {
 
   $('form').trigger('reset')
   console.log('responseData is', responseData)
+  $('#new-game').show()
 
   // show the game, to work as step 2 (css of the game section is now display:none)
   // $("#game").show();
@@ -75,6 +77,18 @@ const signOutFailure = function (error) {
   $('form').trigger('reset')
   console.log('responseData is', error)
 }
+
+const newGameSuccess = function () {
+  $('#game-screen').show()
+}
+
+const newGameFailure = function (error) {
+  $('#sign-in-display').text('Unable to start a new game. Please try again later.')
+  $('#sign-in-display').removeClass()
+  $('#sign-in-display').addClass('text-danger')
+  $('form').trigger('reset')
+  console.log('responseData is', error)
+}
 // export function so they can be used in event.js
 module.exports = {
   signUpSuccess,
@@ -82,5 +96,7 @@ module.exports = {
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  newGameSuccess,
+  newGameFailure
 }

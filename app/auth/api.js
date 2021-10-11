@@ -36,10 +36,20 @@ const signOut = function () {
   })
 }
 
+const newGame = function () {
+  return $.ajax({
+    url: `${config.apiUrl}/games`,
+    method: 'POST',
+    headers: {
+      // here we attach the user.token return by the api to the store var
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
-  signOut
+  signOut,
+  newGame
 }
-
-

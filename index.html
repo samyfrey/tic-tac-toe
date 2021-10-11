@@ -13,13 +13,14 @@
     </head>
     <body>
       <header>Tic Tac Toe</header>
-      <!-- this is screen #1 landing  -->
+      <!-- this is screen #1 landing
       <h1>Landing page</h1>
       <section id="main-button">
         <button id="sign-up-button">Sign Up</button>
         <button id="sign-in-button">Sign In</button>
-      </section>
-      <!-- this is screen #2 -->
+      </section> -->
+
+      <!-- this is screen #2 - sign in  -->
 
       <section id="sign-in-screen">
         <form id="sign-in-form">
@@ -27,12 +28,16 @@
             <input type="email" name="credentials[email]" placeholder="Email" required>
             <input type="password" name="credentials[password]" placeholder="Password" required>
             <button>Sign In</button>
+
           </fieldset>
         </form>
         <div id="sign-in-display"></div>
+        <button id="new-game">New Game</button>
+        <!-- this button will be shown once the user is signed in (may want to pass over the formData from sign in if we want to track results)-->
+
       </section>
 
-      <!-- this is screen #3-->
+      <!-- this is screen #3 - sign up -->
       <section id="sign-up-screen">
       <form id="sign-up-form">
         <fieldset>
@@ -46,9 +51,10 @@
       </section>
 
 
-      <!-- this is screen #4 the screen wil be hidden until signed in-->
+      <!-- this is screen #4 Game Board - the screen is hidden until signed in-->
       <section id="game-screen">
         <p>This is the Game section. It will be display:none in Css and .show() once signed in</p>
+        
         <form id="sign-out">
         <button id="sign-out-button">Sign Out</button>
         <div id="sign-out-display"></div>
