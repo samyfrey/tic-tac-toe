@@ -3,3 +3,13 @@
 #game-screen {
   display: none;
 }
+
+.box {
+  align-items: center;
+  background-color: lightgrey;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
