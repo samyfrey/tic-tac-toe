@@ -1,6 +1,7 @@
 // this file contains the functions that actually change the page and alert the user of changes (sign in, up, out etc) vs app and event.js which 1/ defines what happens when the user interact with the page (click on buttons for ex) - app.js 2/ actually send the request to the server (sign up, in , out) and call the functions contained in this file depending on the api request success/failure - event.js
 
 const store = require('../store')
+const game = require('../game')
 
 // the param responseData is the data (email and pwd when signed up) that is passed by .then notation in event.js
 
@@ -78,8 +79,14 @@ const signOutFailure = function (error) {
   console.log('responseData is', error)
 }
 
-const newGameSuccess = function () {
+const newGameSuccess = function (responseData) {
   $('#game-screen').show()
+  // const playerX = true
+  store.user = responseData.user
+  // this maybe the place where we code our game
+  // when user clicks on a div, turns that div's img to XX and class to XX
+  // maybe use responseData into startGame fuction for currentPLayer
+  $('.cell').on('click', game.startGame())
 }
 
 const newGameFailure = function (error) {

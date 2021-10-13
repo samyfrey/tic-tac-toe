@@ -51,24 +51,28 @@
       </section>
 
 
-      <!-- this is screen #4 Game Board - the screen is hidden until signed in-->
+      <!-- this is screen #4 Game Board - the screen is hidden (display:none) until signed in-->
       <section id="game-screen">
-        <p>This is the Game section. It will be display:none in Css and .show() once signed in</p>
         <div class="container" id="game-board">
           <div class="row">
-            <div class="col-4 col-lg-3 box">1</div>
-            <div class="col-4 col-lg-3 box">2</div>
-            <div class="col-4 col-lg-3 box">3</div>
-            <div class="col-4 col-lg-3 box">4</div>
-            <div class="col-4 col-lg-3 box">5</div>
-            <div class="col-4 col-lg-3 box">6</div>
-            <div class="col-4 col-lg-3 box">7</div>
-            <div class="col-4 col-lg-3 box">8</div>
-            <div class="col-4 col-lg-3 box">9</div>
+            <div class="col-4 col-lg-3 box cell">0</div>
+            <div class="col-4 col-lg-3 box cell">1</div>
+            <div class="col-4 col-lg-3 box cell">2</div>
+            <div class="col-4 col-lg-3 box cell">3</div>
+            <div class="col-4 col-lg-3 box cell">4</div>
+            <div class="col-4 col-lg-3 box cell">5</div>
+            <div class="col-4 col-lg-3 box cell">6</div>
+            <div class="col-4 col-lg-3 box cell">7</div>
+            <div class="col-4 col-lg-3 box cell">8</div>
           </div>
         </div>
+
+        <div class="game-display">Message:</div>
+
         <form id="sign-out">
         <button id="sign-out-button">Sign Out</button>
+        <button id="start-over">Play Again</button>
+
         <div id="sign-out-display"></div>
         </form>
 
