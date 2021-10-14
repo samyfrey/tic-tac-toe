@@ -44,7 +44,7 @@ const signInSuccess = function (responseData) {
 
   $('form').trigger('reset')
   console.log('responseData is', responseData)
-  $('#new-game').show()
+  $('#new-game-btn').show()
 
   // show the game, to work as step 2 (css of the game section is now display:none)
   // $("#game").show();
