@@ -37,14 +37,20 @@ const signUpFailure = function (error) {
 const signInSuccess = function (responseData) {
   // responseData corresponds to the data we get back when we do curl requests (token etc)
   store.user = responseData.user
-  $('#sign-in-display').text('Successfully signed in')
   $('#sign-in-display').removeClass()
+  $('#nav-game').show()
+  $('#sign-in-display').text('Successfully signed in')
   $('#sign-in-display').addClass('text-success')
+  setTimeout(() => $('#sign-in-display').empty(), 5000)
+
   // this where we assign our token (thru responseData, what we get back from the api) to our var store.user (create an object) which is then used in our api.js (store.user.token). we are able to use responseData here as this is the data that is passed in by .then in the events.js (data obtained with getFormFields)
 
   $('form').trigger('reset')
   console.log('responseData is', responseData)
   console.log(store.user)
+  $('#sign-in-screen').hide()
+  $('#sign-up-screen').hide()
+
   $('#new-game-btn').show()
 
   // show the game, to work as step 2 (css of the game section is now display:none)
@@ -65,6 +71,7 @@ const signInFailure = function (error) {
 
 const signOutSuccess = function () {
   $('#game-screen').hide()
+  $('#nav-game').hide()
   $('#sign-out-screen').show()
   // this should be on screen 5 when signed out
   $('#sign-out-display').text('Successfully signed out')
@@ -85,10 +92,28 @@ const signOutFailure = function (error) {
   console.log('responseData is', error)
 }
 
-const signInNav = function () {
+const playAgain = function () {
+  $('#sign-in-display').removeClass()
+  $('#sign-in-display').empty()
+
   $('#sign-out-screen').hide()
+  $('#game-screen').hide()
+  $('#game-over-screen').hide()
   $('#sign-in-screen').show()
 }
+
+const signUp = function () {
+  $('#sign-in-screen').hide()
+  // hide another section
+  $('#sign-up-screen').show()
+}
+
+const signIn = function () {
+  $('#sign-in-screen').show()
+  // hide another section
+  $('#sign-up-screen').hide()
+}
+
 const newGameSuccess = function (responseData) {
   $('#game-screen').show()
   $('#sign-up-screen').hide()
@@ -118,5 +143,7 @@ module.exports = {
   signOutFailure,
   newGameSuccess,
   newGameFailure,
-  signInNav
+  playAgain,
+  signUp,
+  signIn
 }

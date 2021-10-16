@@ -2,8 +2,8 @@
 // can use box instead of cells too
 
 const cells = document.querySelectorAll('.cell')
-const winnerMessage = document.querySelector('.game-display')
-const resetButton = document.getElementById('start-over-btn')
+const winnerMessage = document.querySelector('.winner-display')
+
 
 let playerXTurn = true
 
@@ -66,15 +66,18 @@ const checkWin = (currentPlayer) => {
 }
 
 const endGame = (tie) => {
+  // winnerMsg needs to be on endPage
   if (tie) {
     winnerMessage.innerText = "It's a tie! Game Over!"
     // show endPage instead with message
   } else {
     winnerMessage.innerText = playerXTurn ? 'Player X won' : 'Player Y won'
   }
+  $('#game-screen').hide()
+  $('#game-over-screen').show()
 }
 
-resetButton.addEventListener('click', startGame)
+// resetButton.addEventListener('click', startGame)
 
 startGame()
 

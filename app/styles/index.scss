@@ -12,13 +12,31 @@ header {
   color: rgb(221, 190, 169)
 }
 
+#sign-up-screen {
+  display: none
+}
+
+p {
+  display: inline-block
+}
+#new-game-btn {
+  display:none
+}
 #game-screen {
   display: none;
+}
+#nav-game{
+  display: none
 }
 
 #sign-out-screen{
   display:none;
 }
+
+#game-over-screen{
+  display: none
+}
+
 
 .box {
   align-items: center;
@@ -41,6 +59,6 @@ header {
   background-color: blue;
 }
 
-#new-game-btn {
-  display: none
-}
+// #new-game-btn {
+//   display: none
+// }

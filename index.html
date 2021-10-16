@@ -29,14 +29,15 @@
             <input type="email" name="credentials[email]" placeholder="Email" required>
             <input type="password" name="credentials[password]" placeholder="Password" required>
             <button>Sign In</button>
-
           </fieldset>
         </form>
-        <div id="sign-in-display"></div>
-        <button id="new-game-btn">New Game</button>
-        <!-- this button will be shown once the user is signed in (may want to pass over the formData from sign in if we want to track results)-->
+        <!-- This will contain the no account? Sign up -->
+        <div id="nav-sign-in">
+          <p> No account ? Sign up here : </p> <button id="sign-up-nav">Sign Up</button>
+        </div>
 
       </section>
+
 
       <!-- this is screen #3 - sign up -->
       <section id="sign-up-screen">
@@ -49,6 +50,10 @@
         </fieldset>
       </form>
       <div id="sign-up-display"></div>
+      <div id="nav-sign-up">
+        <p>Already have an account ?</p>
+        <button id="sign-in-nav">Sign In</button>
+      </div>
       </section>
 
 
@@ -68,23 +73,37 @@
           </div>
         </div>
 
-        <div class="game-display"></div>
-        <button id="start-over-btn">Play Again</button>
-
-
-        <form id="sign-out">
-        <button id="sign-out-button">Sign Out</button>
-
-      </form>
       </section>
-<!-- Screen #5 sign out-->
+      <!-- section on the side of the game screen **and** game over screen -->
+      <section id="nav-game">
+        <!-- msg to say sucess signed in and disappear after 5sec -->
+          <div id="sign-in-display"></div>
+          <button id="new-game-btn">New Game</button>
+          <!-- this button is shown once the user is signed in (may want to pass over the formData from sign in if we want to track results) and stays on while user plays to reset game if needed-->
+          <form id="sign-out">
+          <button id="sign-out-button">Sign Out</button>
+          </form>
 
-      <section id="sign-out-screen">
-        <div id="sign-out-display"></div>
-        <p>Play Again?</p>
-        <!-- this button brings me to the sign screen again  -->
-        <button id="sign-in-nav">Sign In</button>
       </section>
-      
+
+
+      <!-- screen #4.1 Game Over -->
+
+    <section id="game-over-screen">
+      <div class="winner-display"></div>
+
+      <!-- this button brings me to the sign in screen again  -->
+      <!-- or sign out -->
+
+    </section>
+    <!-- Screen #5 sign out-->
+
+    <section id="sign-out-screen">
+      <!-- says success signed out -->
+      <div id="sign-out-display"></div>
+      <!-- brings back to sign in -->
+      <button id="play-again-btn">Play Again</button>
+      </section>
+
     </body>
 </html>
