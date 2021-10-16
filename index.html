@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Samy's Tic Tac Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,7 +12,8 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <header>Tic Tac Toe</header>
+      <header>Hippo <span>vs</span> Croco</header>
+      <h1>A Tic Tac Toe game!</h1>
       <!-- this is screen #1 landing
       <h1>Landing page</h1>
       <section id="main-button">
@@ -55,27 +56,35 @@
       <section id="game-screen">
         <div class="container" id="game-board">
           <div class="row">
-            <div class="col-4 col-lg-3 box cell">0</div>
-            <div class="col-4 col-lg-3 box cell">1</div>
-            <div class="col-4 col-lg-3 box cell">2</div>
-            <div class="col-4 col-lg-3 box cell">3</div>
-            <div class="col-4 col-lg-3 box cell">4</div>
-            <div class="col-4 col-lg-3 box cell">5</div>
-            <div class="col-4 col-lg-3 box cell">6</div>
-            <div class="col-4 col-lg-3 box cell">7</div>
-            <div class="col-4 col-lg-3 box cell">8</div>
+            <div class="col-4 box cell">0</div>
+            <div class="col-4 box cell">1</div>
+            <div class="col-4 box cell">2</div>
+            <div class="col-4 box cell">3</div>
+            <div class="col-4 box cell">4</div>
+            <div class="col-4 box cell">5</div>
+            <div class="col-4 box cell">6</div>
+            <div class="col-4 box cell">7</div>
+            <div class="col-4 box cell">8</div>
           </div>
         </div>
 
-        <div class="game-display">Message:</div>
+        <div class="game-display"></div>
         <button id="start-over-btn">Play Again</button>
+
+
         <form id="sign-out">
         <button id="sign-out-button">Sign Out</button>
 
-
-        <div id="sign-out-display"></div>
-        </form>
-
+      </form>
       </section>
+<!-- Screen #5 sign out-->
+
+      <section id="sign-out-screen">
+        <div id="sign-out-display"></div>
+        <p>Play Again?</p>
+        <!-- this button brings me to the sign screen again  -->
+        <button id="sign-in-nav">Sign In</button>
+      </section>
+      
     </body>
 </html>

@@ -35,15 +35,16 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (responseData) {
+  // responseData corresponds to the data we get back when we do curl requests (token etc)
+  store.user = responseData.user
   $('#sign-in-display').text('Successfully signed in')
   $('#sign-in-display').removeClass()
   $('#sign-in-display').addClass('text-success')
   // this where we assign our token (thru responseData, what we get back from the api) to our var store.user (create an object) which is then used in our api.js (store.user.token). we are able to use responseData here as this is the data that is passed in by .then in the events.js (data obtained with getFormFields)
-  // responseData corresponds to the data we get back when we do curl requests (token etc)
-  store.user = responseData.user
 
   $('form').trigger('reset')
   console.log('responseData is', responseData)
+  console.log(store.user)
   $('#new-game-btn').show()
 
   // show the game, to work as step 2 (css of the game section is now display:none)
@@ -62,12 +63,17 @@ const signInFailure = function (error) {
   // $("#game").show();
 }
 
-const signOutSuccess = function (responseData) {
+const signOutSuccess = function () {
+  $('#game-screen').hide()
+  $('#sign-out-screen').show()
+  // this should be on screen 5 when signed out
   $('#sign-out-display').text('Successfully signed out')
   $('#sign-out-display').removeClass()
   $('#sign-out-display').addClass('text-success')
+  store.user = null
   $('form').trigger('reset')
-  console.log('signOutSuccess ran and nothing was returned!', responseData)
+  // need to show sign out screen
+
   // maybe show sign in again ? see screen #5
 }
 
@@ -79,11 +85,17 @@ const signOutFailure = function (error) {
   console.log('responseData is', error)
 }
 
+const signInNav = function () {
+  $('#sign-out-screen').hide()
+  $('#sign-in-screen').show()
+}
 const newGameSuccess = function (responseData) {
   $('#game-screen').show()
+  $('#sign-up-screen').hide()
+  $('#sign-in-screen').hide()
   // const playerX = true
-  store.user = responseData.user
-  // this maybe the place where we code our game
+  store.game = responseData.game
+
   // when user clicks on a div, turns that div's img to XX and class to XX
   // maybe use responseData into startGame fuction for currentPLayer
   $('.cell').on('click', game.startGame())
@@ -105,5 +117,6 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   newGameSuccess,
-  newGameFailure
+  newGameFailure,
+  signInNav
 }

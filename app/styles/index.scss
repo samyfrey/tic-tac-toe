@@ -1,7 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
 
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+body {
+  background-color: rgb(240, 239, 235);
+}
+header {
+  font-family: 'Bungee Shade', cursive;
+  text-align: center;
+  font-size: 100px;
+  color: rgb(221, 190, 169)
+}
+
 #game-screen {
   display: none;
+}
+
+#sign-out-screen{
+  display:none;
 }
 
 .box {
