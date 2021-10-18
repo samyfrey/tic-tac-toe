@@ -2,8 +2,7 @@
 // can use box instead of cells too
 
 const cells = document.querySelectorAll('.cell')
-const winnerMessage = document.querySelector('.winner-display')
-
+const winnerMessage = document.querySelector('#winner-display')
 
 let playerXTurn = true
 

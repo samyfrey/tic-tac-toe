@@ -115,6 +115,7 @@ const signIn = function () {
 }
 
 const newGameSuccess = function (responseData) {
+  $('#winner-display').empty()
   $('#game-screen').show()
   $('#sign-up-screen').hide()
   $('#sign-in-screen').hide()

@@ -15,9 +15,8 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignInSubmit)
   // sign out stretch - brings to screen #5 sign out (play again etc)
   // when New Game button is clicked (after user is signed in) calls the function that will: show the game board (screen #4), start player as X and make POST games API call to create game
-    $("#sign-up-nav").on("click", uiNav.signUp);
-    $("#sign-in-nav").on("click", uiNav.signIn);
-
+  $('#sign-up-nav').on('click', uiNav.signUp)
+  $('#sign-in-nav').on('click', uiNav.signIn)
 
   $('#new-game-btn').on('click', authEvents.onNewGame)
   $('#sign-out-button').on('click', authEvents.onSignOut)

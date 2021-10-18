@@ -13,7 +13,7 @@
     </head>
     <body>
       <header>Hippo <span>vs</span> Croco</header>
-      <h1>A Tic Tac Toe game!</h1>
+      <h1>A Tic Tac Toe game</h1>
       <!-- this is screen #1 landing
       <h1>Landing page</h1>
       <section id="main-button">
@@ -24,6 +24,8 @@
       <!-- this is screen #2 - sign in  -->
 
       <section id="sign-in-screen">
+        <img src="public/hippo.png">
+        <img src="public/croco.png">
         <form id="sign-in-form">
           <fieldset>
             <input type="email" name="credentials[email]" placeholder="Email" required>
@@ -61,15 +63,15 @@
       <section id="game-screen">
         <div class="container" id="game-board">
           <div class="row">
-            <div class="col-4 box cell">0</div>
-            <div class="col-4 box cell">1</div>
-            <div class="col-4 box cell">2</div>
-            <div class="col-4 box cell">3</div>
-            <div class="col-4 box cell">4</div>
-            <div class="col-4 box cell">5</div>
-            <div class="col-4 box cell">6</div>
-            <div class="col-4 box cell">7</div>
-            <div class="col-4 box cell">8</div>
+            <div class="col-4 box cell"></div>
+            <div class="col-4 box cell"></div>
+            <div class="col-4 box cell"></div>
+            <div class="col-4 box cell"></div>
+            <div class="col-4 box cell"></div>
+            <div class="col-4 box cell"></div>
+            <div class="col-4 box cell"></div>
+            <div class="col-4 box cell"></div>
+            <div class="col-4 box cell"></div>
           </div>
         </div>
 
@@ -90,7 +92,7 @@
       <!-- screen #4.1 Game Over -->
 
     <section id="game-over-screen">
-      <div class="winner-display"></div>
+      <div id="winner-display"></div>
 
       <!-- this button brings me to the sign in screen again  -->
       <!-- or sign out -->
