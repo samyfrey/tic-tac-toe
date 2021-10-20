@@ -5,32 +5,68 @@
 body {
   background-color: rgb(240, 239, 235);
   text-align: center;
+
 }
 header {
   font-family: 'Bungee Shade', cursive;
   text-align: center;
-  font-size: 100px;
+  font-size: 50px;
   color: rgb (30, 33, 36)
 // (221, 190, 169)
 }
 
+@media screen and (max-width: 860px) {
+  span  {
+     display: block;
+     line-height: 0.8em;
+
+  }
+}
+
 span {
-  font-size: 75px;
+  font-size: 60px;
 }
 
 h1 {
     font-size: 35px;
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
+    margin-bottom: 50px
+}
+
+p {
+  padding: 10px 0px;
+}
+
+.btn-link {
+  padding: 0;
 }
 
 img{
   width: 150px;
+}
 
+.btn-sm{
+ padding: 2px;
+ height: 30px;
+ width: 80px;
+ font-size: 17px;
+ margin: 10px
 
 }
+
+.btn-lg {
+padding: 2px;
+height: 35px;
+width: 160px;
+font-size: 17px;
+margin: 10px
+}
+
 #sign-up-screen {
-  display: none
+  display: none;
+  margin-top: 50px
+
 }
 
 p {
@@ -41,8 +77,21 @@ p {
 }
 #game-screen {
   display: none;
+  margin-bottom: 250px
 }
-#nav-game{
+// #nav-game{
+//   display: none;
+//   text-align: center;
+//   width: 100%;
+//   outline: 3px solid grey;
+//   padding: 15px;
+//   margin: 50px 50px
+// }
+#nav-buttons, #sign-out{
+  display: inline;
+}
+
+#nav-game {
   display: none
 }
 
@@ -54,17 +103,25 @@ p {
   display: none
 }
 
+.player-display{
+  margin: 15px 15px 0px 15px
+}
 
-.box {
+.container {
+  display: grid;
+  max-width: 600px;
+  margin: 10px auto 10px auto
+}
+.cell {
   align-items: center;
   background-color: lightgrey;
-  border: 1px solid white;
+  border: 5px solid rgb(240, 239, 235);
   color: white;
   display: flex;
-  height: 80px
-  // justify-content: center;
-
+  height: 80px;
 }
+
+
 
 // get turned into background img once user clicks (which assigns class name)
 
@@ -85,6 +142,25 @@ background-position: center;
 background-size: contain;
 }
 
+.currentPlayer {
+width: 70px;
+height: 70px;
+}
+
+.currentPlayerMsg {
+
+font-size: 35px;
+font-family: 'Bebas Neue', cursive;
+left: 10px
+}
+
+// .#winner-display {
+
+// }
+.displays {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 35px
+}
 // #new-game-btn {
 //   display: none
 // }

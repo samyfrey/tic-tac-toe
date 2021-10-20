@@ -30,12 +30,12 @@
           <fieldset>
             <input type="email" name="credentials[email]" placeholder="Email" required>
             <input type="password" name="credentials[password]" placeholder="Password" required>
-            <button>Sign In</button>
+            <button class="btn btn-secondary btn-sm" >Sign In</button>
           </fieldset>
         </form>
         <!-- This will contain the no account? Sign up -->
         <div id="nav-sign-in">
-          <p> No account ? Sign up here : </p> <button id="sign-up-nav">Sign Up</button>
+          <p> No account ?</p> <button id="sign-up-nav" class="btn btn-link">Sign up here</button>
         </div>
 
       </section>
@@ -48,43 +48,45 @@
           <input type="email" name="credentials[email]" placeholder="Email" required>
           <input type="password" name="credentials[password]" placeholder="Password" required>
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
-          <button>Sign Up</button>
+          <button class="btn btn-secondary">Sign Up</button>
         </fieldset>
       </form>
-      <div id="sign-up-display"></div>
+      <div id="sign-up-display" class="displays"></div>
       <div id="nav-sign-up">
         <p>Already have an account ?</p>
-        <button id="sign-in-nav">Sign In</button>
+        <button id="sign-in-nav" class="btn btn-link">Sign In</button>
       </div>
       </section>
 
 
       <!-- this is screen #4 Game Board - the screen is hidden (display:none) until signed in-->
-      <section id="game-screen">
-        <div class="container" id="game-board">
-          <div class="row">
-            <div class="col-4 box cell"></div>
-            <div class="col-4 box cell"></div>
-            <div class="col-4 box cell"></div>
-            <div class="col-4 box cell"></div>
-            <div class="col-4 box cell"></div>
-            <div class="col-4 box cell"></div>
-            <div class="col-4 box cell"></div>
-            <div class="col-4 box cell"></div>
-            <div class="col-4 box cell"></div>
-          </div>
-        </div>
-
-      </section>
       <!-- section on the side of the game screen **and** game over screen -->
       <section id="nav-game">
-        <!-- msg to say sucess signed in and disappear after 5sec -->
-          <div id="sign-in-display"></div>
-          <button id="new-game-btn">New Game</button>
-          <!-- this button is shown once the user is signed in (may want to pass over the formData from sign in if we want to track results) and stays on while user plays to reset game if needed-->
-          <form id="sign-out">
-          <button id="sign-out-button">Sign Out</button>
-          </form>
+        <!-- msg to say success signed in and disappear after 5sec -->
+          <div id="sign-in-display" class="displays"></div>
+          <div id="nav-buttons">
+            <button id="new-game-btn" class="btn btn-secondary btn-lg">New Game</button>
+            <!-- this button is shown once the user is signed in (as a stretch may want to pass over the formData from sign in if we want to track results) and stays on while user plays to reset game if needed-->
+            <form id="sign-out">
+            <button id="sign-out-button" class="btn btn-secondary btn-lg">Sign Out</button>
+            </form>
+          </div>
+        </section>
+        <section id="game-screen">
+        <div class="player-display"><img src="public/hippo.png" class="currentPlayer"><p class="currentPlayerMsg"> 's turn</p></div>
+        <div class="container" id="game-board">
+          <div class="row">
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+          </div>
+        </div>
 
       </section>
 
@@ -92,7 +94,7 @@
       <!-- screen #4.1 Game Over -->
 
     <section id="game-over-screen">
-      <div id="winner-display"></div>
+      <div id="winner-display" class="displays"></div>
 
       <!-- this button brings me to the sign in screen again  -->
       <!-- or sign out -->
@@ -102,9 +104,9 @@
 
     <section id="sign-out-screen">
       <!-- says success signed out -->
-      <div id="sign-out-display"></div>
+      <div id="sign-out-display" class="displays"></div>
       <!-- brings back to sign in -->
-      <button id="play-again-btn">Play Again</button>
+      <button id="play-again-btn" class="btn btn-secondary btn-lg">Play Again</button>
       </section>
 
     </body>

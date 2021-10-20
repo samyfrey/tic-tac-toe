@@ -3,6 +3,7 @@
 
 const cells = document.querySelectorAll('.cell')
 const winnerMessage = document.querySelector('#winner-display')
+const currentPlayerImg = document.querySelector('.currentPlayer')
 
 let playerXTurn = true
 
@@ -37,6 +38,14 @@ const gameTie = () => {
   })
 }
 
+const updateCurrentPlayer = () => {
+  if (playerXTurn) {
+    currentPlayerImg.src = 'public/hippo.png'
+  } else {
+    currentPlayerImg.src = 'public/croco.png'
+  }
+}
+
 const handleCellClick = (event) => {
   const cell = event.target
   const currentPlayer = playerXTurn ? 'playerX' : 'playerY'
@@ -48,6 +57,7 @@ const handleCellClick = (event) => {
     endGame(true)
   } else {
     swapTurns()
+    updateCurrentPlayer()
   }
   //   console.log(checkWin(currentPlayer))
 }
@@ -70,7 +80,7 @@ const endGame = (tie) => {
     winnerMessage.innerText = "It's a tie! Game Over!"
     // show endPage instead with message
   } else {
-    winnerMessage.innerText = playerXTurn ? 'Player X won' : 'Player Y won'
+    winnerMessage.innerText = playerXTurn ? 'Hippo won!' : 'Croco won!'
   }
   $('#game-screen').hide()
   $('#game-over-screen').show()

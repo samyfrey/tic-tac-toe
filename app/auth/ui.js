@@ -8,7 +8,7 @@ const game = require('../game')
 // this function alerts in bodytext the user that the signUp (POST to server) was successful
 const signUpSuccess = function (responseData) {
   $('#sign-up-display').text(
-    'Sign Up was Successful! Sign In to Start a New Game!'
+    'Thanks for signing up'
   )
   // once sign up is successful, the user needs to log in to play (advanced: could allow to play directly as if sign up success === sign in)
 
@@ -72,6 +72,7 @@ const signInFailure = function (error) {
 const signOutSuccess = function () {
   $('#game-screen').hide()
   $('#nav-game').hide()
+  $('#winner-display').hide()
   $('#sign-out-screen').show()
   // this should be on screen 5 when signed out
   $('#sign-out-display').text('Successfully signed out')
