@@ -74,10 +74,12 @@ const signInFailure = function (error) {
 const signOutSuccess = function () {
   $('#game-screen').hide()
   $('#nav-game').hide()
+  $('#sign-in-display').hide()
   $('#winner-display').hide()
+  $('#game-over-screen').hide()
   $('#sign-out-screen').show()
   // this should be on screen 5 when signed out
-  $('#sign-out-display').text('Successfully signed out')
+  $('#sign-out-display').text('See you later')
   $('#sign-out-display').removeClass()
   $('#sign-out-display').addClass('text-success')
   setTimeout(() => $('#sign-out-display').empty(), 5000)
