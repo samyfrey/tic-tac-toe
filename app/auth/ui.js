@@ -59,6 +59,7 @@ const signInSuccess = function (responseData) {
 
 const signInFailure = function (error) {
   $('#sign-in-display').text('Unable to sign in. Please check your credentials and try again.')
+  $('#sign-in-display').show()
   $('#sign-in-display').removeClass()
   $('#sign-in-display').addClass('text-danger')
   $('form').trigger('reset')

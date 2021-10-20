@@ -58,12 +58,12 @@
       </div>
       </section>
 
+      <div id="sign-in-display" class="displays"></div>
 
       <!-- this is screen #4 Game Board - the screen is hidden (display:none) until signed in-->
       <!-- section on the side of the game screen **and** game over screen -->
       <section id="nav-game">
         <!-- msg to say success signed in and disappear after 5sec -->
-          <div id="sign-in-display" class="displays"></div>
           <div id="nav-buttons">
             <button id="new-game-btn" class="btn btn-secondary btn-lg">New Game</button>
             <!-- this button is shown once the user is signed in (as a stretch may want to pass over the formData from sign in if we want to track results) and stays on while user plays to reset game if needed-->
@@ -93,12 +93,9 @@
 
       <!-- screen #4.1 Game Over -->
 
-    <section id="game-over-screen">
-      <div id="winner-display" class="displays"></div>
-
-      <!-- this button brings me to the sign in screen again  -->
-      <!-- or sign out -->
-
+      <section id="game-over-screen">
+        <div id="winner-display" class="displays"></div>
+        <div><img src="public/hippo.png" class="winner-img"></div>
     </section>
     <!-- Screen #5 sign out-->
 

@@ -4,6 +4,7 @@
 const cells = document.querySelectorAll('.cell')
 const winnerMessage = document.querySelector('#winner-display')
 const currentPlayerImg = document.querySelector('.currentPlayer')
+const winnerImg = document.querySelector('.winner-img')
 
 let playerXTurn = true
 
@@ -84,6 +85,11 @@ const endGame = (tie) => {
   }
   $('#game-screen').hide()
   $('#game-over-screen').show()
+  if (playerXTurn) {
+    winnerImg.src = 'public/hippo.png'
+  } else {
+    winnerImg.src = 'public/croco.png'
+  }
 }
 
 // resetButton.addEventListener('click', startGame)
