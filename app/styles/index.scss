@@ -19,7 +19,11 @@ header {
   span  {
      display: block;
      line-height: 0.8em;
-
+  }
+  fieldset, input {
+    display: block;
+    text-align: center;
+    margin: 7px auto
   }
 }
 
@@ -79,14 +83,7 @@ p {
   display: none;
   margin-bottom: 250px
 }
-// #nav-game{
-//   display: none;
-//   text-align: center;
-//   width: 100%;
-//   outline: 3px solid grey;
-//   padding: 15px;
-//   margin: 50px 50px
-// }
+
 #nav-buttons, #sign-out{
   display: inline;
 }

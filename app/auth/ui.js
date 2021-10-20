@@ -28,7 +28,7 @@ const signUpFailure = function (error) {
   // removeClass, removes every previous class assigned (like a green font when sign up success for ex)
   $('#sign-up-display').removeClass()
   $('#sign-up-display').addClass('text-danger')
-
+  setTimeout(() => $('#sign-up-display').empty(), 5000)
   // clear our the form field
   $('form').trigger('reset')
   console.log('error is', error)
@@ -62,6 +62,7 @@ const signInFailure = function (error) {
   $('#sign-in-display').show()
   $('#sign-in-display').removeClass()
   $('#sign-in-display').addClass('text-danger')
+  setTimeout(() => $('#sign-in-display').empty(), 5000)
   $('form').trigger('reset')
   store.user = null
   console.log('responseData is', error)
@@ -79,6 +80,7 @@ const signOutSuccess = function () {
   $('#sign-out-display').text('Successfully signed out')
   $('#sign-out-display').removeClass()
   $('#sign-out-display').addClass('text-success')
+  setTimeout(() => $('#sign-out-display').empty(), 5000)
   store.user = null
   $('form').trigger('reset')
   // need to show sign out screen
@@ -90,6 +92,7 @@ const signOutFailure = function (error) {
   $('#sign-out-display').text('Unable to sign out. Please try again.')
   $('#sign-out-display').removeClass()
   $('#sign-out-display').addClass('text-danger')
+  setTimeout(() => $('#sign-out-display').empty(), 5000)
   $('form').trigger('reset')
   console.log('responseData is', error)
 }
@@ -118,6 +121,7 @@ const signIn = function () {
 
 const newGameSuccess = function (responseData) {
   $('#winner-display').empty()
+  $('#game-over-screen').hide()
   $('#game-screen').show()
   $('#sign-up-screen').hide()
   $('#sign-in-screen').hide()

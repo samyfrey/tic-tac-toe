@@ -79,17 +79,14 @@ const endGame = (tie) => {
   // winnerMsg needs to be on endPage
   if (tie) {
     winnerMessage.innerText = "It's a tie! Game Over!"
+    winnerImg.src = ''
     // show endPage instead with message
   } else {
     winnerMessage.innerText = playerXTurn ? 'Hippo won!' : 'Croco won!'
+    winnerImg.src = playerXTurn ? 'public/hippo.png' : 'public/croco.png'
   }
   $('#game-screen').hide()
   $('#game-over-screen').show()
-  if (playerXTurn) {
-    winnerImg.src = 'public/hippo.png'
-  } else {
-    winnerImg.src = 'public/croco.png'
-  }
 }
 
 // resetButton.addEventListener('click', startGame)
