@@ -1,0 +1,157 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Shade&display=swap');
+
+body {
+  background-color: rgb(240, 239, 235);
+  text-align: center;
+  margin-bottom: auto
+}
+header {
+  font-family: 'Bungee Shade', cursive;
+  text-align: center;
+  font-size: 50px;
+  color: rgb (30, 33, 36)
+
+}
+
+@media screen and (max-width: 860px) {
+  span  {
+     display: block;
+     line-height: 0.8em;
+  }
+  fieldset, input {
+    display: block;
+    text-align: center;
+    margin: 7px auto
+  }
+}
+
+span {
+  font-size: 60px;
+}
+
+h1 {
+    font-size: 35px;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    margin-bottom: 50px
+}
+
+p {
+  padding: 10px 0px;
+}
+
+.btn-link {
+  padding: 0;
+}
+
+img{
+  width: 150px;
+}
+
+.btn-sm{
+ padding: 2px;
+ height: 30px;
+ width: 80px;
+ font-size: 17px;
+ margin: 10px
+
+}
+
+.btn-lg {
+padding: 2px;
+height: 35px;
+width: 160px;
+font-size: 17px;
+margin: 10px
+}
+
+#sign-up-screen {
+  display: none;
+  margin-top: 50px
+
+}
+
+p {
+  display: inline-block
+}
+#new-game-btn {
+  display:none
+}
+#game-screen {
+  display: none;
+
+}
+
+#nav-buttons, #sign-out{
+  display: inline;
+}
+
+#nav-game {
+  display: none
+}
+
+#sign-out-screen{
+  display:none;
+}
+
+#game-over-screen{
+  display: none
+}
+
+.player-display{
+  margin: 15px 15px 0px 15px
+}
+
+.container {
+  display: grid;
+  max-width: 600px;
+  margin: 10px auto 10px auto
+}
+.cell {
+  align-items: center;
+  background-color: lightgrey;
+  border: 5px solid rgb(240, 239, 235);
+  color: white;
+  display: flex;
+  height: 80px;
+}
+
+
+
+// get turned into background img once user clicks (which assigns class name)
+
+.playerX {
+
+background-image: url('public/hippo.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+
+}
+
+.playerY {
+background-image: url('public/croco.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+}
+
+.currentPlayer {
+width: 70px;
+height: 70px;
+}
+
+.currentPlayerMsg {
+
+font-size: 35px;
+font-family: 'Bebas Neue', cursive;
+left: 10px
+}
+
+
+.displays {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 35px
+}

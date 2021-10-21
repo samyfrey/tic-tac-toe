@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Samy's Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <header>Hippo <span>vs</span> Croco</header>
+      <h1>A Tic Tac Toe game</h1>
+      <!-- this is screen #1 landing -->
+
+      <section id="sign-in-screen">
+        <img src="public/hippo.png">
+        <img src="public/croco.png">
+        <form id="sign-in-form">
+          <fieldset>
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+            <button class="btn btn-secondary btn-sm" >Sign In</button>
+          </fieldset>
+        </form>
+        <!-- This will contain the no account? Sign up -->
+        <div id="nav-sign-in">
+          <p> No account ?</p> <button id="sign-up-nav" class="btn btn-link">Sign up here</button>
+        </div>
+      </section>
+
+
+      <!-- this is screen #2 - sign up -->
+      <section id="sign-up-screen">
+      <form id="sign-up-form">
+        <fieldset>
+          <input type="email" name="credentials[email]" placeholder="Email" required>
+          <input type="password" name="credentials[password]" placeholder="Password" required>
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+          <button class="btn btn-secondary">Sign Up</button>
+        </fieldset>
+      </form>
+      <div id="sign-up-display" class="displays"></div>
+      <div id="nav-sign-up">
+        <p>Already have an account ?
+        <button id="sign-in-nav" class="btn btn-link">Sign In</button> </p>
+      </div>
+      </section>
+
+      <!-- msg to say success signed in and disappear after 5sec -->
+      <div id="sign-in-display" class="displays"></div>
+
+      <!-- this is screen #3 Play, Game Board - the screen is hidden (display:none) until signed in-->
+      <!-- section on top of the game screen **and** on game over screen -->
+      <section id="nav-game">
+          <div id="nav-buttons">
+            <button id="new-game-btn" class="btn btn-secondary btn-lg">New Game</button>
+            <!-- this button is shown once the user is signed in (as a stretch may want to pass over the formData from sign in if we want to track results) and stays on while user plays to reset game if needed-->
+            <form id="sign-out">
+            <button id="sign-out-button" class="btn btn-secondary btn-lg">Sign Out</button>
+            </form>
+          </div>
+        </section>
+
+        <section id="game-screen">
+        <div class="player-display"><img src="public/hippo.png" class="currentPlayer"><p class="currentPlayerMsg"> 's turn</p></div>
+        <div class="container" id="game-board">
+          <div class="row">
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+            <div class="col-4 cell"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- screen #4 Game Over -->
+
+      <section id="game-over-screen">
+        <!-- displays who has won / tie -->
+        <div id="winner-display" class="displays"></div>
+        <img class="winner-img">
+      </section>
+
+    <!-- Screen #5 sign out-->
+
+    <section id="sign-out-screen">
+      <!-- says success signed out -->
+      <div id="sign-out-display" class="displays"></div>
+      <!-- brings back to sign in if user clicks btn to play again -->
+      <button id="play-again-btn" class="btn btn-secondary btn-lg">Play Again</button>
+      </section>
+
+    </body>
+</html>
