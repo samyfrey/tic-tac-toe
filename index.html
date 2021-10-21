@@ -14,14 +14,7 @@
     <body>
       <header>Hippo <span>vs</span> Croco</header>
       <h1>A Tic Tac Toe game</h1>
-      <!-- this is screen #1 landing
-      <h1>Landing page</h1>
-      <section id="main-button">
-        <button id="sign-up-button">Sign Up</button>
-        <button id="sign-in-button">Sign In</button>
-      </section> -->
-
-      <!-- this is screen #2 - sign in  -->
+      <!-- this is screen #1 landing -->
 
       <section id="sign-in-screen">
         <img src="public/hippo.png">
@@ -37,11 +30,10 @@
         <div id="nav-sign-in">
           <p> No account ?</p> <button id="sign-up-nav" class="btn btn-link">Sign up here</button>
         </div>
-
       </section>
 
 
-      <!-- this is screen #3 - sign up -->
+      <!-- this is screen #2 - sign up -->
       <section id="sign-up-screen">
       <form id="sign-up-form">
         <fieldset>
@@ -58,12 +50,12 @@
       </div>
       </section>
 
+      <!-- msg to say success signed in and disappear after 5sec -->
       <div id="sign-in-display" class="displays"></div>
 
-      <!-- this is screen #4 Game Board - the screen is hidden (display:none) until signed in-->
-      <!-- section on the side of the game screen **and** game over screen -->
+      <!-- this is screen #3 Play, Game Board - the screen is hidden (display:none) until signed in-->
+      <!-- section on top of the game screen **and** on game over screen -->
       <section id="nav-game">
-        <!-- msg to say success signed in and disappear after 5sec -->
           <div id="nav-buttons">
             <button id="new-game-btn" class="btn btn-secondary btn-lg">New Game</button>
             <!-- this button is shown once the user is signed in (as a stretch may want to pass over the formData from sign in if we want to track results) and stays on while user plays to reset game if needed-->
@@ -72,6 +64,7 @@
             </form>
           </div>
         </section>
+
         <section id="game-screen">
         <div class="player-display"><img src="public/hippo.png" class="currentPlayer"><p class="currentPlayerMsg"> 's turn</p></div>
         <div class="container" id="game-board">
@@ -87,22 +80,22 @@
             <div class="col-4 cell"></div>
           </div>
         </div>
-
       </section>
 
-
-      <!-- screen #4.1 Game Over -->
+      <!-- screen #4 Game Over -->
 
       <section id="game-over-screen">
+        <!-- displays who has won / tie -->
         <div id="winner-display" class="displays"></div>
         <img class="winner-img">
       </section>
+
     <!-- Screen #5 sign out-->
 
     <section id="sign-out-screen">
       <!-- says success signed out -->
       <div id="sign-out-display" class="displays"></div>
-      <!-- brings back to sign in -->
+      <!-- brings back to sign in if user clicks btn to play again -->
       <button id="play-again-btn" class="btn btn-secondary btn-lg">Play Again</button>
       </section>
 

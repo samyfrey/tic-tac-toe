@@ -1,6 +1,3 @@
-
-// can use box instead of cells too
-
 const cells = document.querySelectorAll('.cell')
 const winnerMessage = document.querySelector('#winner-display')
 const currentPlayerImg = document.querySelector('.currentPlayer')
@@ -25,6 +22,7 @@ const startGame = () => {
     cell.classList.remove('playerX')
     cell.classList.remove('playerY')
     cell.removeEventListener('click', handleCellClick)
+    // once : true means event listener can only be triggered once
     cell.addEventListener('click', handleCellClick, { once: true })
   })
 }
@@ -34,7 +32,9 @@ const swapTurns = () => {
 }
 
 const gameTie = () => {
+  // spread notation so i'm able to work with the cells var (HTML elements) as an array
   return [...cells].every(cell => {
+    // returns true if each cell has either a class of playerX or playerY
     return cell.classList.contains('playerX') || cell.classList.contains('playerY')
   })
 }
@@ -49,6 +49,7 @@ const updateCurrentPlayer = () => {
 
 const handleCellClick = (event) => {
   const cell = event.target
+  // conditional (ternary) operator
   const currentPlayer = playerXTurn ? 'playerX' : 'playerY'
   placePlayerImg(cell, currentPlayer)
 
@@ -60,13 +61,12 @@ const handleCellClick = (event) => {
     swapTurns()
     updateCurrentPlayer()
   }
-  //   console.log(checkWin(currentPlayer))
 }
 
 const placePlayerImg = (cell, currentPlayer) => {
   cell.classList.add(currentPlayer)
 }
-
+// nested return statements
 const checkWin = (currentPlayer) => {
   return winningCombinations.some(combination => {
     return combination.every(i => {
@@ -76,20 +76,17 @@ const checkWin = (currentPlayer) => {
 }
 
 const endGame = (tie) => {
-  // winnerMsg needs to be on endPage
   if (tie) {
     winnerMessage.innerText = "It's a tie! Game Over!"
     winnerImg.src = ''
-    // show endPage instead with message
   } else {
     winnerMessage.innerText = playerXTurn ? 'Hippo won!' : 'Croco won!'
     winnerImg.src = playerXTurn ? 'public/hippo.png' : 'public/croco.png'
   }
   $('#game-screen').hide()
   $('#game-over-screen').show()
+  $('#winner-display').show()
 }
-
-// resetButton.addEventListener('click', startGame)
 
 startGame()
 

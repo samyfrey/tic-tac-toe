@@ -78,16 +78,13 @@ const signOutSuccess = function () {
   $('#winner-display').hide()
   $('#game-over-screen').hide()
   $('#sign-out-screen').show()
-  // this should be on screen 5 when signed out
+  // on screen 5 when signed out
   $('#sign-out-display').text('See you later')
   $('#sign-out-display').removeClass()
   $('#sign-out-display').addClass('text-success')
   setTimeout(() => $('#sign-out-display').empty(), 5000)
   store.user = null
   $('form').trigger('reset')
-  // need to show sign out screen
-
-  // maybe show sign in again ? see screen #5
 }
 
 const signOutFailure = function (error) {
@@ -111,13 +108,11 @@ const playAgain = function () {
 
 const signUp = function () {
   $('#sign-in-screen').hide()
-  // hide another section
   $('#sign-up-screen').show()
 }
 
 const signIn = function () {
   $('#sign-in-screen').show()
-  // hide another section
   $('#sign-up-screen').hide()
 }
 
@@ -127,11 +122,7 @@ const newGameSuccess = function (responseData) {
   $('#game-screen').show()
   $('#sign-up-screen').hide()
   $('#sign-in-screen').hide()
-  // const playerX = true
   store.game = responseData.game
-
-  // when user clicks on a div, turns that div's img to XX and class to XX
-  // maybe use responseData into startGame fuction for currentPLayer
   $('.cell').on('click', game.startGame())
 }
 

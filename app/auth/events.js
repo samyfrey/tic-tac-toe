@@ -41,7 +41,7 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
-// function that will: show the game board (screen #4), start player as X and make POST games API call to create game
+// function that will: show the game board screen, start player as X and make POST games API call to create game
 const onNewGame = function (event) {
   event.preventDefault()
   api.newGame()

@@ -12,7 +12,7 @@ header {
   text-align: center;
   font-size: 50px;
   color: rgb (30, 33, 36)
-// (221, 190, 169)
+
 }
 
 @media screen and (max-width: 860px) {
@@ -128,8 +128,7 @@ background-image: url('public/hippo.png');
 background-repeat: no-repeat;
 background-position: center;
 background-size: contain;
-// ("https://amymhaddad.s3.amazonaws.com/morocco-blue.png")
-// center center
+
 }
 
 .playerY {
@@ -151,13 +150,8 @@ font-family: 'Bebas Neue', cursive;
 left: 10px
 }
 
-// .#winner-display {
 
-// }
 .displays {
   font-family: 'Bebas Neue', cursive;
   font-size: 35px
 }
-// #new-game-btn {
-//   display: none
-// }
